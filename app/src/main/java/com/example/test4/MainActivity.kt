@@ -35,5 +35,9 @@ class MainActivity : AppCompatActivity() {
         val helicopteros = helicopterosC + helicopterosEU + helicopterosR
 
         println("En total, en todo el mundo hay unos " + helicopteros + " helicopteros en total.")
+
+        val helicopterosEur = helicopterosEU + helicopterosR
+
+        println("Y si solo contamos a estados unidos y rusia serían " + helicopterosEur + " helicopteros en total.")
     }
 }
