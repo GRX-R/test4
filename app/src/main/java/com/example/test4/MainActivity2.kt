@@ -40,5 +40,7 @@ class MainActivity2 : AppCompatActivity() {
 
         println("En total, tu extraña familia y amigos, trajeron... " + animales + " animales, y hay " + mamiferos + " mamíferos.")
 
+        //26/6/2020
+
     }
 }
