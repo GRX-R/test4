@@ -5,4 +5,5 @@
     <string name="regis">Registrarse</string>
     <string name="iniciar">Iniciar Sesión</string>
     <string name="imagenes">Imagen</string>
+    <string name="toggle">Permutar</string>
 </resources>
