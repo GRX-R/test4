@@ -14,7 +14,7 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        // SE CRAN VARIABLES CON LAS INTERFACES GRÁFICAS
+        // SE CREAN VARIABLES CON LAS INTERFACES GRÁFICAS
         val emailEText = findViewById<EditText>(R.id.emailcito) //SE REFERENCIA EL EMAIL
         val contraEText = findViewById<EditText>(R.id.editTextTextPassword2)
         val botoncito = findViewById<Button>(R.id.botonInicioS) //SE REFERENCIA EL BOTON INICIO

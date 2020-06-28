@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 
                             if (irAlParque == true){
 
-                                println("")
+                                println("Será que la debería besar cuando vea la oportunidad?")
 
                             }
 
