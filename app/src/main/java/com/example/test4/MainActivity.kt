@@ -7,7 +7,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
         //hola
 
         //como estás?
@@ -147,7 +146,6 @@ class MainActivity : AppCompatActivity() {
             println("Verga, soy una perra solitaria, no tengo crush :( ")
 
         }
-
 
     }
 }

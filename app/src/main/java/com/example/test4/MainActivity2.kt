@@ -1,48 +1,46 @@
 package com.example.test4
 
+import android.inputmethodservice.ExtractEditText
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
+import android.text.Editable
+import android.widget.Button
+import android.widget.EditText
+import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        primerFuncion()
+        // SE CRAN VARIABLES CON LAS INTERFACES GRÁFICAS
+        val emailEText = findViewById<EditText>(R.id.emailcito) //SE REFERENCIA EL EMAIL
+        val contraEText = findViewById<EditText>(R.id.editTextTextPassword2)
+        val botoncito = findViewById<Button>(R.id.botonInicioS) //SE REFERENCIA EL BOTON INICIO
 
-    }
+        //SE CREAN LAS VARIABLES DE PRUEBA DE COMPROBACIÓN
+        val cuenta1 = "admin"
+        val contra1 = "1234"
 
-    private fun primerFuncion(){
+        botoncito.setOnClickListener(){
 
-        // Empieza una fuesta...
-        //Es una fiesta de mascotas.
-        //Un sapo hp le da por llevar 126 perros...
+            val emailString: String? = emailEText.text.toString() //SE OBTIENE EL TECTO EN STRING DE EL CAMPO DE EMAIL
+            val contraString: String? = contraEText.text.toString() //SE OBTIENE LA CONTRASEÑA
 
-        val perros = 126
+            println(emailString)
+            println(contraString)
+            if (emailString == cuenta1 && contraString == contra1) {   //SE COMPRUEBA LA IGUALDAD.
 
-        //Ahora, resulta que la tia carmensa se trajo a sus 48 gatos, mucha sapaperra
+                println("¡Inicio Exitoso!")
 
-        val gatos = 48
+            } else {
 
-        //Y, a tu primo con down, le dio por trar sus camaleones. 3 camaleones.
+                println("Error en el inicio de sesión...")
 
-        val camaleones = 3
+            }
 
-        //¿Cuántos animales hay en la fiesta?
-
-        val animales = perros + gatos + camaleones
-
-        //¿Cuántos de estos animales son mamíferos?
-
-        val mamiferos = perros + gatos
-
-        //Mostrar en pantalla
-
-        println("En total, tu extraña familia y amigos, trajeron... " + animales + " animales, y hay " + mamiferos + " mamíferos.")
-
-        //26/6/2020
-
-        //26/6/2020
+        }
 
     }
 }
