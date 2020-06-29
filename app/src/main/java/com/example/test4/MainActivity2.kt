@@ -1,14 +1,10 @@
 package com.example.test4
 
 import android.content.Intent
-import android.inputmethodservice.ExtractEditText
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
-import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
-import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +41,7 @@ class MainActivity2 : AppCompatActivity() {
 
         //SE CREAN LAS VARIABLES DE PRUEBA DE COMPROBACIÓN
         val cuenta1 = "admin"
-        val contra1: String? = null
+        val contra1: String? = "1234"
 
         botoncito.setOnClickListener(){
 
@@ -60,6 +56,9 @@ class MainActivity2 : AppCompatActivity() {
             if (emailString == cuenta1 && contraString == contra1) {   //SE COMPRUEBA LA IGUALDAD.
 
                 println("¡Inicio Exitoso!")
+
+                val interfazLoged = Intent(this, PantallaLoggedAndres::class.java)
+                startActivity(interfazLoged)
 
             } else {
 
