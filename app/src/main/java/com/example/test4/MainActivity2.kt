@@ -15,6 +15,28 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
+        interfaz()
+        Aprendizaje()
+
+    }
+
+    private fun Aprendizaje(){
+
+
+        //Prueba Suma: Double, Float & Int
+        val myFloat = 1.5f
+        val myDouble = 1.25
+        val myInt = 1
+
+        println(myFloat + myDouble + myInt)
+
+        //----------------------------
+        // 
+
+    }
+
+    private fun interfaz(){
+
         // SE CREAN VARIABLES CON LAS INTERFACES GRÁFICAS
         val emailEText = findViewById<EditText>(R.id.emailcito) //SE REFERENCIA EL EMAIL
         val contraEText = findViewById<EditText>(R.id.editTextTextPassword2)
@@ -23,7 +45,7 @@ class MainActivity2 : AppCompatActivity() {
 
         //SE CREAN LAS VARIABLES DE PRUEBA DE COMPROBACIÓN
         val cuenta1 = "admin"
-        val contra1 = "1234"
+        val contra1: String? = null
 
         botoncito.setOnClickListener(){
 
@@ -32,6 +54,9 @@ class MainActivity2 : AppCompatActivity() {
 
             println(emailString)
             println(contraString)
+
+            println(emailString + contraString)
+
             if (emailString == cuenta1 && contraString == contra1) {   //SE COMPRUEBA LA IGUALDAD.
 
                 println("¡Inicio Exitoso!")
@@ -45,10 +70,11 @@ class MainActivity2 : AppCompatActivity() {
 
         permutarBot.setOnClickListener(){
 
-            val intento1 = Intent(this, MainActivity::class.java)
+            val intento1 = Intent(this, SegundaPantalla::class.java)
             startActivity(intento1)
 
         }
 
     }
+
 }
