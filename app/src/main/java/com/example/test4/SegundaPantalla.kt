@@ -36,17 +36,38 @@ class SegundaPantalla : AppCompatActivity() {
 
     private fun interfaz(){
 
-        //val emailEditText = findViewById<EditText>(R.id.emailInput)
-        //val contraEditText = findViewById<EditText>(R.id.editTextTextPassword)
+        val emailEditText = findViewById<EditText>(R.id.emailInput)
+        val contraEditText = findViewById<EditText>(R.id.editTextTextPassword)
         val registerA = findViewById<Button>(R.id.registroBot)
-        //val inicioSesionA = findViewById<Button>(R.id.inicioBot)
+        val inicioSesionA = findViewById<Button>(R.id.inicioBot)
 
-        //var usuario = ""
-        //var contra = ""
+        var usuario: String? = null
+        var contra: String? = null
 
         registerA.setOnClickListener(){
 
-            //val emailText = emailEditText.text.toString()
+            val emailText = emailEditText.text.toString()
+            val contraText = contraEditText.text.toString()
+
+            usuario = emailText
+            contra = contraText
+
+        }
+
+        inicioSesionA.setOnClickListener(){
+
+            val emailTextI = emailEditText.text.toString()
+            val contraTextI = contraEditText.text.toString()
+
+            if (emailTextI == usuario && contraTextI == contra){
+
+                println("Log-in exitoso!")
+
+            } else {
+
+                println("Error de log-in!")
+
+            }
 
         }
 
