@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 
 class SegundaPantalla : AppCompatActivity() {
 
@@ -13,6 +14,7 @@ class SegundaPantalla : AppCompatActivity() {
         setContentView(R.layout.activity_segunda_pantalla)
 
         permutacionMain2() //Se llama a la función de cambio de pantallas.
+        interfaz()
     }
 
 
@@ -27,6 +29,24 @@ class SegundaPantalla : AppCompatActivity() {
             //Se busca el Activity (Pantalla a cargar)
             val intento = Intent(this, MainActivity2::class.java)
             startActivity(intento)
+
+        }
+
+}
+
+    private fun interfaz(){
+
+        //val emailEditText = findViewById<EditText>(R.id.emailInput)
+        //val contraEditText = findViewById<EditText>(R.id.editTextTextPassword)
+        val registerA = findViewById<Button>(R.id.registroBot)
+        //val inicioSesionA = findViewById<Button>(R.id.inicioBot)
+
+        //var usuario = ""
+        //var contra = ""
+
+        registerA.setOnClickListener(){
+
+            //val emailText = emailEditText.text.toString()
 
         }
 
